@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="BackG. Color"
+        android:id="@+id/changecolor">
+        <menu>
+            <item
+                android:id="@+id/redrize"
+                android:icon="@android:drawable/ic_input_add"
+                android:title="red" />​
+            <item
+                android:id="@+id/blurize"
+                android:icon="@android:drawable/ic_input_add"
+                android:title="blue" />
+
+            <item
+                android:id="@+id/yellorize"
+                android:icon="@android:drawable/ic_input_add"
+                android:title="Yellow" />​​
+        </menu>
+    </item>
+    <item android:title="Rotate 30 degrees"
+        android:id="@+id/rotate"/>
+
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/info"
+            android:orderInCategory="1"
+            android:title="Show Info" />
+
+        <item
+            android:id="@+id/enlarge"
+            android:orderInCategory="1"
+            android:title="Enlarge" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/chicken"
+            android:orderInCategory="2"
+            android:title="chicken" />
+
+        <item
+            android:id="@+id/pasta"
+            android:orderInCategory="2"
+
+            android:title="pasta" />
+    </group>
+</menu>
