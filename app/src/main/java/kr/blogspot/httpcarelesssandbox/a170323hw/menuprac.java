@@ -16,13 +16,12 @@ public class menuprac extends AppCompatActivity {
 
     TextView text;
     ImageView image;
+    int degree=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuprac);
-
-
     }
 
     @Override
@@ -52,7 +51,10 @@ public class menuprac extends AppCompatActivity {
 
         //회전시키기기
        else if(item.getItemId()==R.id.rotate) {
-            image.setRotation(30);
+            int temp;
+            temp=rotate(image, degree);
+            degree=temp;
+            item.setChecked(false);
         }
 
         //제목보이기
@@ -134,6 +136,12 @@ public class menuprac extends AppCompatActivity {
 
             //scalex이라는게 있다
         }
+    }
+
+    private int rotate(ImageView pic, int dig){
+        dig=dig+30;
+        pic.setRotation(dig);
+        return dig;
     }
 
     private boolean infocont(boolean ch){
